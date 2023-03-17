@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("../fonts/opensans-400.woff2") format("woff2"),
+    url("../fonts/opensans-400.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("../fonts/opensans-700.woff2") format("woff2"),
+    url("../fonts/opensans-700.woff") format("woff");
+}
+
+:root {
+  --font-default: "Open Sans", arial, tahoma, sans-serif;
+}

@@ -1,24 +1,43 @@
 {
-  "name": "mishka-27",
+  "name": "cat-energy-27",
   "private": true,
-  "description": "Личный проект «Мишка» от HTML Academy",
+  "description": "Личный проект «Кэт энерджи» от HTML Academy",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "1.0.0",
-    "autoprefixer": "10.4.0",
-    "browser-sync": "2.27.7",
-    "gulp": "4.0.2",
-    "gulp-dart-sass": "^1.0.2",
-    "gulp-plumber": "1.2.1",
-    "gulp-postcss": "9.0.1",
-    "postcss": "8.3.11",
-    "stylelint": "13.13.1",
-    "stylelint-config-htmlacademy": "0.1.11"
+    "@htmlacademy/editorconfig-cli": "1.0.x",
+    "autoprefixer": "10.4.x",
+    "browser-sync": "2.27.x",
+    "del": "6.0.x",
+    "gh-pages": "4.0.x",
+    "gulp": "4.0.x",
+    "gulp-html-bemlinter": "2.1.x",
+    "gulp-html-prettify": "^0.0.1",
+    "gulp-htmlmin": "5.0.x",
+    "gulp-if": "3.0.x",
+    "gulp-libsquoosh": "1.0.x",
+    "gulp-plumber": "1.2.x",
+    "gulp-postcss": "9.0.x",
+    "gulp-rename": "2.0.x",
+    "gulp-sass": "^5.1.0",
+    "gulp-stacksvg": "1.1.x",
+    "gulp-svgmin": "4.1.x",
+    "gulp-terser": "2.1.x",
+    "gulp-twig": "^1.2.0",
+    "gulp-w3c-html-validator": "5.1.x",
+    "postcss": "8.3.x",
+    "postcss-csso": "5.0.x",
+    "sass": "^1.57.1",
+    "stylelint": "13.13.x",
+    "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
-    "lint": "npm run editorconfig && npm run stylelint",
-    "build": "gulp styles",
+    "w3c": "gulp compileTwig validateMarkup --series --silent",
+    "bemlint": "gulp compileTwig lintBem --series --silent",
+    "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlint",
+    "build": "gulp build",
+    "deploy": "gulp build && gh-pages -d build",
+    "start-dev": "gulp startBuild",
     "start": "gulp"
   },
   "browserslist": [
@@ -37,7 +56,7 @@
     "source/sass/**/*.scss"
   ],
   "engines": {
-    "node": "^16"
+    "node": "16.18.x"
   },
   "type": "module"
 }

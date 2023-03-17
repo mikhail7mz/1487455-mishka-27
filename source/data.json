@@ -1,0 +1,45 @@
+{
+  "projectName": "Mishka",
+  "pages": [
+    {
+      "path": "index.html",
+      "name": "главная"
+    },
+    {
+      "path": "catalog.html",
+      "name": "каталог товаров"
+    },
+    {
+      "path": "form.html",
+      "name": "вязание на заказ"
+    }
+  ],
+  "viewports": {
+    "desktop": 1150,
+    "tablet": 768,
+    "mobile": 320
+  },
+  "maxdppx": 2,
+  "images": {
+    "example": {
+      "ext": "png",
+      "sizes": [
+        {
+          "viewport": "desktop",
+          "width": 552,
+          "height": 499
+        },
+        {
+          "viewport": "tablet",
+          "width": 709,
+          "height": 609
+        },
+        {
+          "viewport": "mobile",
+          "width": 280,
+          "height": 270
+        }
+      ]
+    }
+  }
+}

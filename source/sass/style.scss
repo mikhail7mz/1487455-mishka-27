@@ -1,1 +1,9 @@
-// Начните писать стили здесь
+@use "./global/variables";
+@use "./global/fonts";
+@use "./global/media";
+@use "./global/mixins";
+@use "./global/reboot";
+@use "./utils/layout";
+@use "./utils/container";
+@use "./utils/breaker";
+@use "./utils/visually-hidden";

@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
-  </head>
-  <body>
+{% set pageId = 0 %}
+{% set permalink = pages[pageId].path %}
+{% extends "templates/_layout.twig" %}
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
-
-  </body>
-</html>
+{% block main %}
+  <main class="page__main">
+    text
+  </main>
+{% endblock %}
