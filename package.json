@@ -37,7 +37,7 @@
     "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlint",
     "build": "gulp build",
     "deploy": "gulp build && gh-pages -d build",
-    "start-dev": "gulp startBuild",
+    "start-dev": "gulp startDev",
     "start": "gulp"
   },
   "browserslist": [

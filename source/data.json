@@ -21,23 +21,152 @@
   },
   "maxdppx": 2,
   "images": {
-    "example": {
-      "ext": "png",
+    "intro": {
+      "ext": "jpg",
       "sizes": [
         {
           "viewport": "desktop",
-          "width": 552,
-          "height": 499
+          "width": 1150,
+          "height": 746
         },
         {
           "viewport": "tablet",
-          "width": 709,
-          "height": 609
+          "width": 768,
+          "height": 746
         },
         {
           "viewport": "mobile",
-          "width": 280,
-          "height": 270
+          "width": 320,
+          "height": 373
+        }
+      ]
+    },
+    "triple-set": {
+      "ext": "jpg",
+      "sizes": [
+        {
+          "viewport": "desktop",
+          "width": 525,
+          "height": 636
+        },
+        {
+          "viewport": "tablet",
+          "width": 334,
+          "height": 404
+        },
+        {
+          "viewport": "mobile",
+          "width": 260,
+          "height": 315
+        }
+      ]
+    },
+    "feedback-background": {
+      "ext": "jpg",
+      "sizes": [{
+          "viewport": "tablet",
+          "width": 350,
+          "height": 457
+        }
+      ]
+    },
+    "map": {
+      "ext": "jpg",
+      "sizes": [
+        {
+          "viewport": "desktop",
+          "width": 527,
+          "height": 457
+        },
+        {
+          "viewport": "tablet",
+          "width": 768,
+          "height": 457
+        },
+        {
+          "viewport": "mobile",
+          "width": 320,
+          "height": 455
+        }
+      ]
+    },
+    "hare": {
+      "ext": "jpg",
+      "sizes": [
+        {
+          "viewport": "desktop",
+          "width": 316,
+          "height": 462
+        },
+        {
+          "viewport": "tablet",
+          "width": 334,
+          "height": 334
+        },
+        {
+          "viewport": "mobile",
+          "width": 260,
+          "height": 195
+        }
+      ]
+    },
+    "clothes-pottle": {
+      "ext": "jpg",
+      "sizes": [
+        {
+          "viewport": "desktop",
+          "width": 316,
+          "height": 462
+        },
+        {
+          "viewport": "tablet",
+          "width": 334,
+          "height": 334
+        },
+        {
+          "viewport": "mobile",
+          "width": 260,
+          "height": 195
+        }
+      ]
+    },
+    "toys-pottle": {
+      "ext": "jpg",
+      "sizes": [
+        {
+          "viewport": "desktop",
+          "width": 316,
+          "height": 462
+        },
+        {
+          "viewport": "tablet",
+          "width": 334,
+          "height": 334
+        },
+        {
+          "viewport": "mobile",
+          "width": 260,
+          "height": 195
+        }
+      ]
+    },
+    "video": {
+      "ext": "jpg",
+      "sizes": [
+        {
+          "viewport": "desktop",
+          "width": 683,
+          "height": 455
+        },
+        {
+          "viewport": "tablet",
+          "width": 668,
+          "height": 455
+        },
+        {
+          "viewport": "mobile",
+          "width": 260,
+          "height": 150
         }
       ]
     }

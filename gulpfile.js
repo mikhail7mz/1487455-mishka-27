@@ -1,3 +1,13 @@
+/*
+!!! Created for node server v16.18.1
+This gulp build has 2 modes: developing and production
+
+Differences of developing mode:
+-- No compression images
+-- No creation webP and avif files
+-- Creating html and css files without including webP and avif formats.
+*/
+
 import gulp from 'gulp';
 import data from './source/data.json' assert {type: 'json'};
 import browser from 'browser-sync';
@@ -12,7 +22,7 @@ export {compileTwig, validateMarkup, lintBem};
 
 data.isDevelopment = false;
 
-// Remove build
+// Delete build folder
 
 const removeBuild = () => {
   return del('build');
@@ -34,7 +44,7 @@ const compileProject = (done) => {
   )(done);
 }
 
-// Server
+// Run localhost server
 
 const server = (done) => {
   browser.init({
@@ -62,7 +72,8 @@ const watcher = () => {
   gulp.watch(['source/**/*.{html,twig}', 'source/data.json'], gulp.series(compileTwig, serverReload));
 }
 
-// Npm run build
+// Build the project in production mode without running the localhost server.
+// To read about developing and production mode follow to the begining of this file.
 
 export const build = (done) => {
   data.isDevelopment = false;
@@ -72,7 +83,8 @@ export const build = (done) => {
   )(done);
 }
 
-// Npm run start-dev
+// Run the localhost server building the project in developing mode.
+// To read about developing and production mode follow to the begining of this file.
 
 export const startDev = (done) => {
   data.isDevelopment = true;
@@ -84,7 +96,8 @@ export const startDev = (done) => {
   )(done);
 }
 
-// Npm run start
+// Run the localhost server building the project in production mode.
+// To read about developing and production mode follow to the begining of this file.
 
 export default gulp.series(
   removeBuild,
