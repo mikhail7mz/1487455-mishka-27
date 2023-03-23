@@ -1,0 +1,230 @@
+@use "../global/variables.scss" as *;
+@use "../global/media.scss" as *;
+
+.navigation__toggle {
+  position: absolute;
+  top: 32px;
+  right: 30px;
+  width: 20px;
+  height: 14px;
+  padding: 0;
+  border: 0;
+  background-image: linear-gradient($color-default, $color-default);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 2px;
+
+  @media #{$not-mobile} {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $color-default;
+    content: "";
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+
+.navigation__toggle--close {
+  background: none;
+
+  &::before,
+  &::after {
+    top: 50%;
+    bottom: auto;
+  }
+
+  &::before {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  &::after {
+    transform: translateY(-50%) rotate(45deg);
+  }
+}
+
+.navigation__body {
+  position: absolute;
+  left: 0;
+  display: none;
+  width: 100%;
+  background-color: $background-default;
+  transform: translateY(23px);
+
+  @media #{$not-mobile} {
+    position: static;
+    display: grid;
+    grid-template-columns: minmax(320px,47.9%) 1fr;
+    background: none;
+    transform: none;
+
+    &::before {
+      transform: scaleX(1000000);
+      background: $background-default;
+      box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+      content: "";
+    }
+  }
+}
+
+.navigation__body::before,
+.navigation__body > *:nth-child(2) {
+  order: -1;
+}
+
+.navigation__body--opened {
+  display: block;
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media #{$not-mobile} {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.navigation__item {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    height: 1px;
+    transform: translateX(-50%);
+    background-color: #ececec;
+    content: "";
+
+    @media #{$not-mobile} {
+      display: none;
+    }
+  }
+}
+
+.navigation__link {
+  display: block;
+  min-height: 88px;
+  padding: 28px 0 27px calc(46px + var(--page-offset));
+  font: 700 17px/24px var(--font-default);
+  color: $color-dark;
+  text-decoration: none;
+
+  @media #{$not-mobile} {
+    padding: 21px 0;
+  }
+}
+
+.navigation__link--has-icon {
+  position: relative;
+  min-width: 82px;
+
+  @media #{$not-mobile} {
+    padding: 33px 0 31px 82px;
+  }
+
+  &::before {
+    position: absolute;
+    left: var(--page-offset);
+    width: 21px;
+    height: 21px;
+    background-color: #000;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    content: "";
+
+    @media #{$not-mobile} {
+      left: 31px;
+    }
+  }
+}
+
+.navigation__link--has-icon-search::before {
+  mask-image: url("../img/stack.svg#icons_search");
+  mask-size: 18px 18px;
+}
+
+.navigation__link--has-icon-cart::before {
+  mask-image: url("../img/stack.svg#icons_cart");
+  mask-size: 21px 18px;
+}
+
+.navigation__link--has-icon-only {
+  @media #{$not-mobile} {
+    padding: 0;
+    font-size: 0;
+  }
+
+  &::before {
+    @media #{$not-mobile} {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+}
+
+.navigation__list--main {
+  @media #{$not-mobile} {
+    column-gap: 37px;
+  }
+
+  .navigation__link {
+    @media #{$not-mobile} {
+      font-size: 15px;
+    }
+  }
+}
+
+.navigation__list--user {
+  @media #{$not-mobile} {
+    background-image: linear-gradient(to bottom, $background-default 88px, rgba(0,0,0,0.1) 88px);
+    background-repeat: repeat-y;
+    background-size: 100% 89px;
+    z-index: 1;
+  }
+
+  .navigation__item {
+    @media #{$not-mobile} {
+      border-left: 1px solid rgba(0,0,0,0.1);
+    }
+  }
+}
+
+.navigation__list--categories {
+  display: none;
+
+  @media #{$desktop-only} {
+    display: block;
+  }
+}
+
+.navigation__info {
+  display: none;
+  margin: 0;
+
+  @media #{$not-mobile} {
+    display: block;
+    padding: 21px 0;
+    justify-self: end;
+    font: 15px/24px var(--font-default);
+    color: $color-default
+  }
+}

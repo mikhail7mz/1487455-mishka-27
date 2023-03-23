@@ -1,3 +1,5 @@
+@use "../global/media" as *;
+
 .breaker::after {
   content: "\A";
 }

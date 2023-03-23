@@ -1,3 +1,13 @@
+@use "../global/media.scss" as *;
+
+$color-default: #444444;
+$color-dark: #000000;
+$background-default: #ffffff;
+
 :root {
-  --color-primary: #000000;
+  --page-offset: 30px;
+
+  @media #{$not-mobile} {
+    --page-offset: 50px
+  }
 }

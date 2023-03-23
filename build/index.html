@@ -1,27 +1,165 @@
-<!DOCTYPE html><html class="page" lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script>function addClass(className) {
-      document.documentElement.classList.add(className);
-    }
-    var avif = new Image();
-    avif.src = "data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A=";
-    avif.onload = function () {
-      addClass("avif");
-    };
-    avif.onerror = function () {
-      check_webp_feature(function (isSupported) {
-        if (isSupported) {
-          return addClass("webp");
-        }
-        return addClass("fallback");
-      });
-    };
-    function check_webp_feature(callback) {
-      var img = new Image();
-      img.onload = function () {
-        var result = img.width > 0 && img.height > 0;
-        callback(result);
-      };
-      img.onerror = function () {
-        callback(false);
-      };
-      img.src = "data:image/webp;base64,UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==";
-    }</script><link rel="icon" href="favicon.ico"><link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="img/favicons/180.png"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="css/style.min.css"><link rel="preload" href="fonts/opesas-400.woff2" as="font" type="font/woff2" crossorigin="anonymous"><link rel="preload" href="fonts/opesas-700.woff2" as="font" type="font/woff2" crossorigin="anonymous"><title>Mishka | Главная</title></head><body class="page__body"><header class="header"><a class="logo" href="index.html"><span class="visually-hidden">Логотип сайта. Переход на главную.</span></a><nav class="navigation"><button class="navigation__toggle" type="button"><span class="visually-hidden">Открыть/закрыть меню.</span></button><div class="navigation__body"><ul class="navigation__list"><li class="navigation__item"><a class="navigation__link" href="catalog.html">Каталог товаров</a></li><li class="navigation__item"><a class="navigation__link" href="form.html">Вязание на заказ</a></li></ul><ul class="navigation__list"><li class="navigation__item"><a class="navigation__link" href="#">Поиск по сайту</a></li><li class="navigation__item"><a class="navigation__link" href="#">Корзина: пока пуста</a></li></ul><ul class="navigation__list"><li class="navigation__item"><a class="navigation__link" href="#">Новые поступления</a></li><li class="navigation__item"><a class="navigation__link" href="#">Распродажа</a></li></ul><p class="navigation__info">Бесплатная доставка по России</p></div></nav></header><main class="page__main"><h1 class="visually-hidden">Интернет-магазин "Мишка". Товары для дома ручной работы.</h1><section class="intro"><h2 class="intro__heading">Милые штуки ручной работы для дома</h2><ul class="intro__menu"><li class="intro__menu-item">Предметы интерьера</li><li class="intro__menu-item">Детские игрушки</li></ul></section><section class="product"><h2 class="product__heading">Вязаные корзинки</h2><p class="product__spoiler">товар недели</p><p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p><dl class="product__parameters"><dt class="product__parameters-name">Цвет:</dt><dd class="product__parameters-value">тиффани/серый</dd><dt class="product__parameters-name">Диаметр:</dt><dd class="product__parameters-value">25 см</dd><dt class="product__parameters-name">Высота:</dt><dd class="product__parameters-value">15 см</dd></dl><img class="product__image" src="#" alt="..."><p class="product__price">Цена: 990 руб.</p><a class="product__button" href="#">заказать</a></section><section class="about"><h2 class="about__heading">Коротко о нас:</h2><ul class="about__list"><li class="about__item"><a class="about__link" href="#">Экологически чистые материалы</a></li><li class="about__item"><a class="about__link" href="#">Скандинавский стиль по российской цене</a></li><li class="about__item"><a class="about__link" href="#">Увеличивает лайки на фотографиях</a></li><li class="about__item"><a class="about__link" href="#">Связано вручную с любовью и умилением</a></li><li class="about__item"><a class="about__link" href="#">Поддержка отечественного производителя</a></li><li class="about__item"><a class="about__link" href="#">Поставляется в подарочной упаковке</a></li></ul></section><section class="feedback"><h2 class="feedback__heading">Отзывы</h2><ul class="feedback__slider"><li class="feedback__slider-item"><blockquote class="feedback__slider-text"><p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p><cite class="feedback__slider-author">Анастасия Красильникова <span class="feedback__slider-author-id">@misssssiskras</span></cite></blockquote></li></ul><div class="feedback__slider-toggles"><button class="feedback__slider-button feedback__slider-button-prev" type="button"><span class="visually-hidden">Назад.</span></button> <button class="feedback__slider-button feedback__slider-button-next" type="button"><span class="visually-hidden">Вперёд.</span></button></div><a class="feedback__link" href="#">Написать</a></section><section class="contacts"><h2 class="contacts__heading">Контакты</h2><div class="contacts__option"><h2 class="contacts__title">e-mail:</h2><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></div><div class="contacts__option"><h2 class="contacts__title">адрес:</h2><a href="mailto:info@mimimishkashop.ru">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</a></div><iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002735!2d30.320858715590237!3d59.938719169054785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1679063203944!5m2!1sru!2sru" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><a class="contacts__link" href="#">Напишите нам</a></section></main><footer class="footer"></footer><script src="js/script.js"></script></body></html>
+<!DOCTYPE html>
+<html class="layout" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensans-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <title>Mishka | Главная</title>
+</head>
+
+<body class="layout__body">
+
+  <header class="header">
+    <div class="container container__relative">
+      <a class="header__logo" href="index.html">
+        <span class="visually-hidden">Логотип сайта. Переход на главную.</span>
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/stack.svg#logo-desktop" type="image/svg+xml" width="149" height="72">
+            <source media="(min-width: 768px)" srcset="img/stack.svg#logo-tablet" type="image/svg+xml" width="114" height="46">
+              <img class="header__logo-image" src="img/stack.svg#logo-mobile" width="86" height="35" alt="Текстовый логотип сайта в виде слова мишка">
+        </picture>
+      </a>
+      <nav class="header__navigation navigation navigation--no-js">
+        <button class="navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть/закрыть меню.</span>
+        </button>
+        <div class="navigation__body">
+          <ul class="navigation__list navigation__list--main">
+            <li class="navigation__item">
+              <a class="navigation__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="form.html">Вязание на заказ</a>
+            </li>
+          </ul>
+          <ul class="navigation__list navigation__list--user">
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--has-icon navigation__link--has-icon-search navigation__link--has-icon-only" href="#">Поиск по сайту</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--has-icon navigation__link--has-icon-cart" href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
+          <ul class="navigation__list navigation__list--categories">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Новые поступления</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">Распродажа</a>
+            </li>
+          </ul>
+          <p class="navigation__info">Бесплатная доставка по России</p>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="layout__main">
+    <h1 class="visually-hidden">Интернет-магазин "Мишка". Товары для дома ручной работы.</h1>
+    <section class="intro">
+      <h2 class="intro__heading">Милые штуки ручной работы для дома</h2>
+
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/intro--desktop@1x.jpg 1x, img/intro--desktop@2x.jpg 2x" type="image/jpg" width="1150" height="746">
+          <source media="(min-width: 768px)" srcset="img/intro--tablet@1x.jpg 1x, img/intro--tablet@2x.jpg 2x" type="image/jpg" width="768" height="746">
+            <img class="intro__image" src="img/intro--mobile@1x.jpg" srcset="img/intro--mobile@2x.jpg 2x" width="320" height="373" alt="Кукольный домик с вязанными игрушками.">
+      </picture>
+      <ul class="intro__menu">
+        <li class="intro__menu-item">Предметы интерьера</li>
+        <li class="intro__menu-item">Детские игрушки</li>
+      </ul>
+    </section>
+    <section class="product">
+      <h2 class="product__heading">Вязаные корзинки</h2>
+      <p class="product__spoiler">товар недели</p>
+      <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+      <dl class="product__parameters">
+        <dt class="product__parameters-name">Цвет:</dt>
+        <dd class="product__parameters-value">тиффани/серый</dd>
+        <dt class="product__parameters-name">Диаметр:</dt>
+        <dd class="product__parameters-value">25 см</dd>
+        <dt class="product__parameters-name">Высота:</dt>
+        <dd class="product__parameters-value">15 см</dd>
+      </dl>
+
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/triple-set--desktop@1x.jpg 1x, img/triple-set--desktop@2x.jpg 2x" type="image/jpg" width="525" height="636">
+          <source media="(min-width: 768px)" srcset="img/triple-set--tablet@1x.jpg 1x, img/triple-set--tablet@2x.jpg 2x" type="image/jpg" width="334" height="404">
+            <img class="product__image" src="img/triple-set--mobile@1x.jpg" srcset="img/triple-set--mobile@2x.jpg 2x" width="260" height="315" alt="Набор из трех вазанных корзиночек.">
+      </picture>
+      <p class="product__price">Цена: 990 руб.</p>
+      <a class="product__button" href="#">заказать</a>
+    </section>
+    <section class="about">
+      <h2 class="about__heading">Коротко о нас:</h2>
+      <ul class="about__list">
+        <li class="about__item">
+          <a class="about__link" href="#">Экологически чистые материалы</a>
+        </li>
+        <li class="about__item">
+          <a class="about__link" href="#">Скандинавский стиль по российской цене</a>
+        </li>
+        <li class="about__item">
+          <a class="about__link" href="#">Увеличивает лайки на фотографиях</a>
+        </li>
+        <li class="about__item">
+          <a class="about__link" href="#">Связано вручную с любовью и умилением</a>
+        </li>
+        <li class="about__item">
+          <a class="about__link" href="#">Поддержка отечественного производителя</a>
+        </li>
+        <li class="about__item">
+          <a class="about__link" href="#">Поставляется в подарочной упаковке</a>
+        </li>
+      </ul>
+    </section>
+    <section class="feedback">
+      <h2 class="feedback__heading">Отзывы</h2>
+      <ul class="feedback__slider">
+        <li class="feedback__slider-item">
+          <blockquote class="feedback__slider-text">
+            <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше
+              лайков!</p>
+            <cite class="feedback__slider-author">Анастасия Красильникова <span class="feedback__slider-author-id">@misssssiskras</span></cite>
+          </blockquote>
+        </li>
+      </ul>
+      <div class="feedback__slider-toggles">
+        <button class="feedback__slider-button feedback__slider-button-prev" type="button">
+          <span class="visually-hidden">Назад.</span>
+        </button>
+        <button class="feedback__slider-button feedback__slider-button-next" type="button">
+          <span class="visually-hidden">Вперёд.</span>
+        </button>
+      </div>
+      <a class="feedback__link" href="#">Написать</a>
+    </section>
+    <section class="contacts">
+      <h2 class="contacts__heading">Контакты</h2>
+      <div class="contacts__option">
+        <h2 class="contacts__title">e-mail:</h2>
+        <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+      </div>
+      <div class="contacts__option">
+        <h2 class="contacts__title">адрес:</h2>
+        <a href="mailto:info@mimimishkashop.ru">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</a>
+      </div>
+      <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002735!2d30.320858715590237!3d59.938719169054785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1679063203944!5m2!1sru!2sru"
+      width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a class="contacts__link" href="#">Напишите нам</a>
+    </section>
+  </main>
+  <footer class="footer">
+
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

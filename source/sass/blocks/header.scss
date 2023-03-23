@@ -1,3 +1,36 @@
+@use "../global/media.scss" as *;
+
 .header {
+  position: relative;
+  z-index: 2;
   margin: 0;
+  padding: 22px 0;
+  box-shadow: 0px 1px 0px #ececec, inset 0px 1px 0px #ececec;
+
+  @media #{$not-mobile} {
+    margin-bottom: -88px;
+    padding: 0;
+    background-image: linear-gradient(to top, transparent 88px, #f1f1f1 88px);
+    box-shadow: none;
+  }
+}
+
+.header__logo {
+  display: block;
+  width: 86px;
+  height: 35px;
+  margin: 0 auto;
+
+  @media #{$not-mobile} {
+    position: absolute;
+    top: 22px;
+    z-index: 1;
+    width: 113px;
+    height: 46px;
+    margin-left: 0;
+  }
+}
+
+.header__logo-image {
+  display: block;
 }

@@ -1,6 +1,13 @@
+@use "../global/media" as *;
+
 .container {
   display: block;
   width: 100%;
   max-width: $breakpoint-desktop;
   margin: 0 auto;
+  padding: 0 var(--page-offset);
+}
+
+.container--relative {
+  position: relative;
 }

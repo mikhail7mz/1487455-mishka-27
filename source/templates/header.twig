@@ -1,37 +1,44 @@
 <header class="header">
-  <a class="logo" href="index.html">
-    <span class="visually-hidden">Логотип сайта. Переход на главную.</span>
-  </a>
-  <nav class="navigation">
-    <button class="navigation__toggle" type="button">
-      <span class="visually-hidden">Открыть/закрыть меню.</span>
-    </button>
-    <div class="navigation__body">
-      <ul class="navigation__list">
-        <li class="navigation__item">
-          <a class="navigation__link" href="catalog.html">Каталог товаров</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="form.html">Вязание на заказ</a>
-        </li>
-      </ul>
-      <ul class="navigation__list">
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">Поиск по сайту</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">Корзина: пока пуста</a>
-        </li>
-      </ul>
-      <ul class="navigation__list">
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">Новые поступления</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">Распродажа</a>
-        </li>
-      </ul>
-      <p class="navigation__info">Бесплатная доставка по России</p>
-    </div>
-  </nav>
+  <div class="container container__relative">
+    <a class="header__logo" href="index.html">
+      <span class="visually-hidden">Логотип сайта. Переход на главную.</span>
+      <picture>
+        <source media="(min-width: {{viewports.desktop}}px)" srcset="img/stack.svg#logo-desktop" type="image/svg+xml" width="149" height="72">
+        <source media="(min-width: {{viewports.tablet}}px)" srcset="img/stack.svg#logo-tablet" type="image/svg+xml" width="114" height="46">
+        <img class="header__logo-image" src="img/stack.svg#logo-mobile" width="86" height="35" alt="Текстовый логотип сайта в виде слова мишка">
+      </picture>
+    </a>
+    <nav class="header__navigation navigation navigation--no-js">
+      <button class="navigation__toggle" type="button">
+        <span class="visually-hidden">Открыть/закрыть меню.</span>
+      </button>
+      <div class="navigation__body">
+        <ul class="navigation__list navigation__list--main">
+          <li class="navigation__item">
+            <a class="navigation__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="form.html">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="navigation__list navigation__list--user">
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--has-icon navigation__link--has-icon-search navigation__link--has-icon-only" href="#">Поиск по сайту</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--has-icon navigation__link--has-icon-cart" href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
+        <ul class="navigation__list navigation__list--categories">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Новые поступления</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Распродажа</a>
+          </li>
+        </ul>
+        <p class="navigation__info">Бесплатная доставка по России</p>
+      </div>
+    </nav>
+  </div>
 </header>

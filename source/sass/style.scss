@@ -7,3 +7,6 @@
 @use "./utils/container";
 @use "./utils/breaker";
 @use "./utils/visually-hidden";
+@use "./blocks/header";
+@use "./blocks/navigation";
+@use "./blocks/intro";
