@@ -1,3 +1,6 @@
+@use "./global/variables" as *;
+@use "./global/media" as *;
+
 .layout {
   height: 100%;
 }
@@ -8,6 +11,13 @@
   margin: 0;
   display: flex;
   flex-direction: column;
+  font: 13px/24px var(--font-default);
+  color: $color-default;
+
+  @media #{$not-mobile} {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .layout__main {

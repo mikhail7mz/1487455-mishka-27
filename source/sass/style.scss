@@ -7,6 +7,14 @@
 @use "./utils/container";
 @use "./utils/breaker";
 @use "./utils/visually-hidden";
+@use "./blocks/heading";
+@use "./blocks/button";
 @use "./blocks/header";
 @use "./blocks/navigation";
 @use "./blocks/intro";
+@use "./blocks/product";
+@use "./blocks/about";
+@use "./blocks/feedback";
+@use "./blocks/contacts";
+@use "./blocks/social";
+@use "./blocks/footer";

@@ -1,0 +1,39 @@
+@use "./global/variables" as *;
+@use "./global/media" as *;
+
+.button {
+  display: block;
+  margin: 0;
+  padding: 14px;
+  border: 2px solid $color-default;
+  font: 700 18px/20px var(--font-default);
+  text-align: center;
+  color: $color-default;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: none;
+  transition-property: color, background;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+
+  @media #{$not-mobile} {
+    font-size: 17px;
+  }
+
+  &:focus {
+    outline-color: #63d1bb;
+    outline-width: 2px;
+    outline-offset: 5px;
+  }
+
+  &:hover {
+    color: $background-default;
+    background: $color-default;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background: $color-default;
+  }
+}

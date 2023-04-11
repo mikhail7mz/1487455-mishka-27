@@ -1,0 +1,53 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 29px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.social__link {
+  display: block;
+  width: 28px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  background-color: #231f20;
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  mask-size: contain;
+
+  &--vk {
+    mask-image: url("../img/stack.svg#icons_vk");
+  }
+
+  &--telegram {
+    mask-image: url("../img/stack.svg#icons_telegram");
+  }
+
+  &--youtube {
+    mask-image: url("../img/stack.svg#icons_youtube");
+  }
+
+  &:focus {
+    outline-color: #46c1ae;
+    outline-width: 2px;
+    outline-offset: 5px;
+  }
+
+  &:hover {
+    background-color: #46c1ae;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: #46c1ae;
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+}

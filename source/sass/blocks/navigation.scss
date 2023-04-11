@@ -66,7 +66,7 @@
   @media #{$not-mobile} {
     position: static;
     display: grid;
-    grid-template-columns: minmax(320px,47.9%) 1fr;
+    grid-template-columns: minmax(320px, 47.9%) 1fr;
     background: none;
     transform: none;
 
@@ -145,7 +145,7 @@
     left: var(--page-offset);
     width: 21px;
     height: 21px;
-    background-color: #000;
+    background-color: #000000;
     mask-repeat: no-repeat;
     mask-position: center center;
     content: "";
@@ -176,7 +176,7 @@
     @media #{$not-mobile} {
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
   }
 }
@@ -195,7 +195,7 @@
 
 .navigation__list--user {
   @media #{$not-mobile} {
-    background-image: linear-gradient(to bottom, $background-default 88px, rgba(0,0,0,0.1) 88px);
+    background-image: linear-gradient(to bottom, $background-default 88px, rgba(0, 0, 0, 0.1) 88px);
     background-repeat: repeat-y;
     background-size: 100% 89px;
     z-index: 1;
@@ -203,7 +203,7 @@
 
   .navigation__item {
     @media #{$not-mobile} {
-      border-left: 1px solid rgba(0,0,0,0.1);
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
     }
   }
 }
@@ -225,6 +225,6 @@
     padding: 21px 0;
     justify-self: end;
     font: 15px/24px var(--font-default);
-    color: $color-default
+    color: $color-default;
   }
 }

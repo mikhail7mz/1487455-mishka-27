@@ -1,34 +1,217 @@
 @use "./global/variables" as *;
 @use "./global/media" as *;
+@use "./global/mixins" as *;
 
 .intro {
   position: relative;
+  min-height: 430px;
+  margin-bottom: 31px;
   padding-top: 73px;
+  background-color: #fafafa;
+  overflow: hidden;
 
   @media #{$not-mobile} {
-    padding-top: 119px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 791px;
+    margin-bottom: 40px;
+    padding-top: 189px;
+  }
+
+  @media #{$desktop-only} {
+    min-height: 797px;
+    padding-top: 192px;
+  }
+
+  &::after {
+    @media #{$not-mobile} {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      width: 100%;
+      height: 24px;
+
+      @include bg-image("intro-zigzag");
+      background-size: 768px 100%;
+      background-repeat: repeat-x;
+      background-position: center center;
+      content: "";
+    }
+
+    @media #{$desktop-only} {
+      height: 34px;
+      background-size: 1250px 100%;
+    }
   }
 }
 
 .intro__heading {
   position: relative;
   z-index: 1;
-  margin-bottom: 120px;
+  max-width: $breakpoint-desktop;
+  margin: 0 auto 120px;
   padding: 0 var(--page-offset);
   font: 700 27px/30px var(--font-default);
   color: $color-dark;
   text-align: center;
 
   @media #{$not-mobile} {
-    margin-bottom: 372px;
+    margin-bottom: 50px;
     font-size: 43px;
     line-height: 50px;
+  }
+
+  @media #{$desktop-only} {
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
 .intro__image {
   position: absolute;
-  top: 0;
+  width: 320px;
+  height: 373px;
+  top: -17px;
   left: 50%;
   transform: translateX(-50%);
+
+  @media #{$not-mobile} {
+    top: auto;
+    bottom: 12px;
+    width: 768px;
+    height: 746px;
+  }
+
+  @media #{$desktop-only} {
+    bottom: 17px;
+    width: 1150px;
+  }
+}
+
+.intro__menu {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  max-width: $breakpoint-desktop;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+
+  @media #{$not-mobile} {
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto var(--page-offset) 0;
+  }
+
+  @media #{$desktop-only} {
+    width: calc($breakpoint-desktop - var(--page-offset) * 2);
+    margin: auto auto 0;
+  }
+}
+
+.intro__menu-item {
+  --background: #ffffff;
+  --background-hover: #ffffff;
+}
+
+.intro__menu-item:nth-child(2n-1) {
+  --background: #63d1bb;
+  --background-hover: #59d5bc;
+}
+
+.intro__menu-item:nth-child(2n) {
+  --background: #56c3b2;
+  --background-hover: #46c1ae;
+}
+
+.intro__menu-link {
+  position: relative;
+  display: block;
+  min-height: 103px;
+  padding: 24px 56% 31px var(--page-offset);
+  font: 700 19px/24px var(--font-default);
+  color: #ffffff;
+  text-decoration: none;
+  background-color: var(--background);
+  box-shadow: 0 0 0 var(--background-hover);
+  transition-property: transform, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+
+  @media #{$not-mobile} {
+    height: 100%;
+    min-height: 131px;
+    padding: 25px 56% 46px 36px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media #{$desktop-only} {
+    min-height: 136px;
+    padding-right: 65%;
+  }
+
+  &::after {
+    position: absolute;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: contain;
+    background-color: #149080;
+    opacity: 0.5;
+    content: "";
+  }
+
+  &--interior::after {
+    top: 23px;
+    right: calc(var(--page-offset) + 6px);
+    width: 40px;
+    height: 62px;
+    mask-image: url("../img/stack.svg#icons_interior");
+
+    @media #{$not-mobile} {
+      top: 29px;
+      right: 37px;
+    }
+  }
+
+  &--toys::after {
+    top: 21px;
+    right: calc(var(--page-offset) - 3px);
+    width: 60px;
+    height: 60px;
+    mask-image: url("../img/stack.svg#icons_toy");
+
+    @media #{$not-mobile} {
+      top: 31px;
+      right: 33px;
+    }
+  }
+
+  &:focus {
+    z-index: 1;
+    outline-color: #63d1bb;
+    outline-width: 2px;
+    outline-offset: 5px;
+    box-shadow: none;
+  }
+
+  &:hover,
+  &:active {
+    background: var(--background-hover);
+    box-shadow: 0 5px 0 var(--background-hover);
+    transform: translateY(-5px);
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    &::after {
+      opacity: 0.7;
+    }
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
 }

@@ -8,6 +8,6 @@ $background-default: #ffffff;
   --page-offset: 30px;
 
   @media #{$not-mobile} {
-    --page-offset: 50px
+    --page-offset: 50px;
   }
 }

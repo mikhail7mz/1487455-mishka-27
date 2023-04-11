@@ -1,0 +1,18 @@
+@use "./global/variables" as *;
+@use "./global/media" as *;
+
+.heading {
+  margin: 0;
+  font: 700 25px/30px var(--font-default);
+  color: $color-dark;
+
+  @media #{$not-mobile} {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media #{$desktop-only} {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}

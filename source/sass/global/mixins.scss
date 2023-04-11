@@ -1,3 +1,5 @@
+@use "./global/media" as *;
+
 @mixin bg-image($name, $preimage: "", $postimage: "") {
   @each $viewport in getviewports($name) {
     $media-query: null;

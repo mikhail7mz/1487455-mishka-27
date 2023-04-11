@@ -41,6 +41,21 @@
         }
       ]
     },
+    "intro-zigzag": {
+      "ext": "png",
+      "sizes": [
+        {
+          "viewport": "desktop",
+          "width": 1250,
+          "height": 34
+        },
+        {
+          "viewport": "tablet",
+          "width": 768,
+          "height": 24
+        }
+      ]
+    },
     "triple-set": {
       "ext": "jpg",
       "sizes": [
@@ -58,6 +73,26 @@
           "viewport": "mobile",
           "width": 260,
           "height": 315
+        }
+      ]
+    },
+    "product-zigzag": {
+      "ext": "png",
+      "sizes": [
+        {
+          "viewport": "desktop",
+          "width": 1050,
+          "height": 23
+        },
+        {
+          "viewport": "tablet",
+          "width": 772,
+          "height": 17
+        },
+        {
+          "viewport": "mobile",
+          "width": 320,
+          "height": 6
         }
       ]
     },
