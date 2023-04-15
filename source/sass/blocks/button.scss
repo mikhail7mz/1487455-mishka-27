@@ -15,6 +15,7 @@
   transition-property: color, background;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
+  overflow-wrap: anywhere;
 
   @media #{$not-mobile} {
     font-size: 17px;

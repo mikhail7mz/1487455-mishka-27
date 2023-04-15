@@ -2,12 +2,13 @@
 @use "../global/media.scss" as *;
 
 .footer {
-  padding-top: 28px;
+  padding-top: 22px;
   padding-bottom: 23px;
   background-color: #f1f1f1;
 
   @media #{$not-mobile} {
     padding-top: 51px;
+    padding-bottom: 57px;
   }
 }
 
@@ -17,20 +18,31 @@
   justify-items: center;
 
   @media #{$not-mobile} {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
     justify-items: start;
   }
 }
 
 .footer__logo {
+  flex-shrink: 0;
   display: none;
-  width: 102px;
-  height: 35px;
-  background-color: #000000;
-  mask-repeat: no-repeat;
-  mask-position: center center;
-  mask-size: contain;
-  mask-image: url("../img/stack.svg#logo-footer");
+
+  &::before {
+    display: block;
+    width: 102px;
+    height: 35px;
+    background-color: #000000;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: contain;
+    mask-image: url("../img/stack.svg#logo-footer");
+    content: "";
+  }
+
+  @media #{$not-mobile} {
+    display: block;
+  }
 
   &:focus {
     outline-color: #46c1ae;
@@ -38,36 +50,36 @@
     outline-offset: 5px;
   }
 
-  &:hover {
+  &:hover::before {
     background-color: #46c1ae;
     cursor: pointer;
   }
 
-  &:active {
+  &:active::before {
     background-color: #46c1ae;
     opacity: 0.3;
-  }
-
-  @media #{$not-mobile} {
-    display: block;
   }
 }
 
 .footer__social {
+  flex-shrink: 0;
   margin-bottom: 53px;
   padding-top: 6px;
 
   @media #{$not-mobile} {
+    max-width: 200px;
     margin-bottom: 0;
   }
 
   @media #{$desktop-only} {
+    max-width: 400px;
     padding-left: 64px;
     padding-right: 64px;
   }
 }
 
 .footer__copyrights {
+  flex-shrink: 0;
   justify-self: end;
   display: flex;
   column-gap: 27px;
@@ -76,6 +88,14 @@
   line-height: 18px;
   color: $color-dark;
   text-decoration: none;
+
+  @media #{$not-mobile} {
+    max-width: 200px;
+  }
+
+  @media #{$desktop-only} {
+    max-width: 400px;
+  }
 
   &::after {
     flex-shrink: 0;
@@ -89,8 +109,25 @@
     mask-image: url("../img/stack.svg#htmlacademy");
     content: "";
   }
+
+  &:focus {
+    outline-color: #46c1ae;
+    outline-width: 2px;
+    outline-offset: 5px;
+  }
+
+  &:hover::after {
+    background-color: #46c1ae;
+    cursor: pointer;
+  }
+
+  &:active::after {
+    background-color: #46c1ae;
+    opacity: 0.3;
+  }
 }
 
 .footer__copyrights-text {
   padding-top: 8px;
+  overflow-wrap: anywhere;
 }

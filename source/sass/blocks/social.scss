@@ -1,32 +1,42 @@
 .social {
   display: flex;
   flex-wrap: wrap;
+  align-items: start;
   gap: 29px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
+.social__item {
+  line-height: 22px;
+}
+
 .social__link {
   display: block;
-  width: 28px;
-  height: 22px;
-  padding: 0;
-  border: none;
-  background-color: #231f20;
-  mask-repeat: no-repeat;
-  mask-position: center center;
-  mask-size: contain;
 
-  &--vk {
+  &::before {
+    display: block;
+    width: 28px;
+    height: 22px;
+    padding: 0;
+    border: none;
+    background-color: #231f20;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: contain;
+    content: "";
+  }
+
+  &--vk::before {
     mask-image: url("../img/stack.svg#icons_vk");
   }
 
-  &--telegram {
+  &--telegram::before {
     mask-image: url("../img/stack.svg#icons_telegram");
   }
 
-  &--youtube {
+  &--youtube::before {
     mask-image: url("../img/stack.svg#icons_youtube");
   }
 
@@ -36,17 +46,17 @@
     outline-offset: 5px;
   }
 
-  &:hover {
+  &:hover::before {
     background-color: #46c1ae;
     cursor: pointer;
   }
 
-  &:active {
+  &:active::before {
     background-color: #46c1ae;
     opacity: 0.3;
   }
 
-  &:disabled {
+  &:disabled::before {
     opacity: 0.2;
     pointer-events: none;
   }

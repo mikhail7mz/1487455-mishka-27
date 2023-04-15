@@ -5,6 +5,7 @@
   margin: 0;
   font: 700 25px/30px var(--font-default);
   color: $color-dark;
+  overflow-wrap: break-word;
 
   @media #{$not-mobile} {
     font-size: 43px;

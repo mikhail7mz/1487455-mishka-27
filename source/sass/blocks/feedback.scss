@@ -77,10 +77,11 @@
 
 .feedback__heading {
   margin-bottom: 14px;
+  overflow-wrap: anywhere;
 
   @media #{$not-mobile} {
+    max-width: 60%;
     margin-bottom: 39px;
-    padding-right: 300px;
   }
 
   @media #{$desktop-only} {
@@ -115,6 +116,7 @@
 
 .feedback__message-paragraph {
   margin: 0;
+  overflow-wrap: anywhere;
 
   &:last-of-type {
     margin-bottom: 34px;
@@ -126,6 +128,15 @@
     @media #{$desktop-only} {
       margin-bottom: 44px;
     }
+  }
+}
+
+.feedback__author {
+  display: block;
+  overflow-wrap: anywhere;
+
+  @media #{$not-mobile} {
+    max-width: 70%;
   }
 }
 
@@ -172,6 +183,7 @@
     right: 1px;
     bottom: 3px;
     min-width: 80px;
+    max-width: 200px;
     margin-bottom: 0;
     border: none;
     background: none;

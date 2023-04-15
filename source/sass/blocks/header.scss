@@ -239,6 +239,7 @@
   font: 700 17px/24px var(--font-default);
   color: $color-dark;
   text-decoration: none;
+  overflow-wrap: break-word;
 
   @media #{$not-mobile} {
     padding: 21px 0;
