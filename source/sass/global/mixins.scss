@@ -57,3 +57,27 @@
     }
   }
 }
+
+@mixin bottom-wavy($background-max-width) {
+  &::after {
+    @media #{$not-mobile} {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      width: 100%;
+      height: 24px;
+
+      @include bg-image("intro-zigzag");
+      background-size: 768px 100%;
+      background-repeat: repeat-x;
+      background-position: center center;
+      content: "";
+    }
+
+    @media #{$desktop-only} {
+      height: 34px;
+      background-size: #{$background-max-width} 100%;
+    }
+  }
+}

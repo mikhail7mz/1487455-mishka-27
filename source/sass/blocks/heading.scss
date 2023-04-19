@@ -17,3 +17,11 @@
     line-height: 57px;
   }
 }
+
+.heading--main {
+  text-align: center;
+
+  @media #{$mobile-only} {
+    font-size: 27px;
+  }
+}

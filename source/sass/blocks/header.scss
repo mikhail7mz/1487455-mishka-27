@@ -9,7 +9,6 @@
   box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
 
   @media #{$not-mobile} {
-    margin-bottom: -88px;
     padding: 0;
     background-image: linear-gradient(to top, transparent 88px, #f1f1f1 88px);
     box-shadow: none;
@@ -161,7 +160,7 @@
       1fr
       var(--page-offset);
     row-gap: 10px;
-    background-color: #fafafa;
+    background-color: var(--background-accent);
   }
 
   @media #{$desktop-only} {

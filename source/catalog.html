@@ -1,0 +1,102 @@
+{% set pageId = 1 %}
+{% set permalink = pages[pageId].path %}
+{% extends "templates/_layout.twig" %}
+
+{% block main %}
+  <main class="layout__main">
+    <div class="layout__intro">
+      <div class="container">
+        <h1 class="heading heading--main">{{ pages[pageId].name|capitalize }}</h1>
+      </div>
+    </div>
+    <section class="catalog">
+      <div class="container">
+        <h2 class="visually-hidden">Товары.</h2>
+        <ul class="catalog__product-list">
+          <li class="catalog__product">
+            <a class="catalog__image-link" href="#">
+              {% include "./templates/picture.twig" with {
+                name: "hare",
+                class: "catalog__image",
+                alt: "Игрушка в форме зайчика рядом с рожком мороженного."
+              } %}
+            </a>
+            <div class="catalog__info">
+              <h3 class="catalog__title">
+                <a class="catalog__title-link" href="#">Зайчик-попрыгайчик</a>
+              </h3>
+              <p class="catalog__details">Рост 30 см, вес 200 г</p>
+              <div class="catalog__buying">
+                <span class="catalog__price">1 200 руб.</span>
+                <a class="catalog__button-cart" href="#">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="catalog__product">
+            <a class="catalog__image-link" href="#">
+              {% include "./templates/picture.twig" with {
+                name: "clothes-pottle",
+                class: "catalog__image",
+                alt: "Вязанная корзиночка с тремя полотенцами внутри."
+              } %}
+            </a>
+            <div class="catalog__info" href="#">
+              <h3 class="catalog__title">
+                <a class="catalog__title-link" href="#">Корзинка для белья</a>
+              </h3>
+              <p class="catalog__details">Диаметр 15 см, высота 10 см</p>
+              <div class="catalog__buying">
+                <span class="catalog__price">690 руб.</span>
+                <a class="catalog__button-cart" href="#">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="catalog__product">
+            <a class="catalog__image-link" href="#">
+              {% include "./templates/picture.twig" with {
+                name: "toys-pottle",
+                class: "catalog__image",
+                alt: "Большая вязанная корзинка с кучей мягких игрушек внутри."
+              } %}
+            </a>
+            <div class="catalog__info" href="#">
+              <h3 class="catalog__title">
+                <a class="catalog__title-link" href="#">Большая корзинка для&nbsp;игрушек</a>
+              </h3>
+              <p class="catalog__details">Диаметр 30 см, высота 30 см</p>
+              <div class="catalog__buying">
+                <span class="catalog__price">1 500 руб.</span>
+                <a class="catalog__button-cart" href="#">
+                  <span class="visually-hidden">Добавить в корзину.</span>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="production">
+      <div class="container container--relative">
+        <div class="production__body">
+          <h2 class="production__heading">Процесс производства</h2>
+          <div class="production__video-wrapper">
+            {% include "./templates/picture.twig" with {
+              name: "video",
+              class: "production__image",
+              alt: "Процесс вязания корзинки."
+            } %}
+            <button class="production__button" type="button">
+              <span class="visually-hidden">Начать просмотр видео.</span>
+            </button>
+          </div>
+          <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="production__link button" href="#">Сделать заказ</a>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock %}

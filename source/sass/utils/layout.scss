@@ -1,11 +1,13 @@
 @use "./global/variables" as *;
 @use "./global/media" as *;
+@use "./global/mixins" as *;
 
 .layout {
   height: 100%;
 }
 
 .layout__body {
+  --background-accent: #f1f1f1;
   min-width: 320px;
   min-height: 100%;
   margin: 0;
@@ -20,7 +22,30 @@
   }
 }
 
+.layout__body--theme-light {
+  --background-accent: #fafafa;
+}
+
 .layout__main {
   flex-grow: 1;
   overflow-x: hidden;
+}
+
+.layout__intro {
+  position: relative;
+  background-color: #f1f1f1;
+  padding-top: 74px;
+  padding-bottom: 74px;
+
+  @include bottom-wavy("1150px");
+
+  @media #{$not-mobile} {
+    padding-top: 47px;
+    padding-bottom: 86px;
+  }
+
+  @media #{$desktop-only} {
+    padding-top: 48px;
+    padding-bottom: 113px;
+  }
 }

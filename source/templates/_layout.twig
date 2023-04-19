@@ -13,7 +13,7 @@
   <link rel="preload" href="fonts/opensans-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <title>{{ projectName }} | {{ pages[pageId].name|capitalize }}</title>
 </head>
-<body class="layout__body">
+<body class="layout__body{{ theme ? ' layout__body--theme-light' : '' }}">
 
   {% include "./header.twig" %}
   {% block main %}{% endblock %}

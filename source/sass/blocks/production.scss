@@ -1,0 +1,174 @@
+@use "./global/variables" as *;
+@use "./global/media" as *;
+
+.production {
+  margin-bottom: 58px;
+
+  @media #{$not-mobile} {
+    margin-bottom: 64px;
+  }
+
+  @media #{$desktop-only} {
+    margin-bottom: 104px;
+  }
+}
+
+.production__body {
+  border: 1px solid #ececec;
+  padding-bottom: 32px;
+
+  @media #{$not-mobile} {
+    padding-top: 455px;
+    padding-bottom: 45px;
+  }
+
+  @media #{$desktop-only} {
+    min-height: 455px;
+    padding-top: 0;
+    padding-left: 682px;
+  }
+}
+
+.production__heading {
+  display: flex;
+  gap: 25px;
+  margin: 0 0 25px;
+  padding: 22px 34px 0;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: $color-dark;
+  overflow-wrap: anywhere;
+
+  @media #{$not-mobile} {
+    gap: 33px;
+    margin-bottom: 23px;
+    padding: 41px 41px 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media #{$desktop-only} {
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 27px;
+    padding: 48px 79px 0;
+  }
+
+  &::before {
+    flex-shrink: 0;
+    display: block;
+    margin-top: 12px;
+    width: 32px;
+    height: 22px;
+    background-image: url("../img/stack.svg#icons_video");
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+
+    @media #{$not-mobile} {
+      margin-top: -2px;
+    }
+  }
+}
+
+.production__video-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+  background-color: #ececec;
+
+  @media #{$not-mobile} {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: calc(100% - var(--page-offset) * 2);
+    transform: translateX(-50%);
+  }
+
+  @media #{$desktop-only} {
+    left: var(--page-offset);
+    width: 682px;
+    margin: 0;
+    transform: none;
+  }
+}
+
+.production__image {
+  display: block;
+  width: 260px;
+  height: 150px;
+
+  @media #{$not-mobile} {
+    width: 668px;
+    height: 455px;
+  }
+
+  @media #{$desktop-only} {
+    width: 682px;
+  }
+}
+
+.production__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 101px;
+  height: 77px;
+  padding: 0;
+  border: none;
+  background: none;
+  background-image: url("../img/stack.svg#icons_play");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s;
+
+  &:focus {
+    outline-color: #46c1ae;
+    outline-width: 2px;
+    outline-offset: 5px;
+  }
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.3;
+  }
+}
+
+.production__text {
+  margin: 0 0 41px;
+  padding: 0 30px 0 33px;
+  overflow-wrap: anywhere;
+
+  @media #{$not-mobile} {
+    padding: 0 39px;
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  @media #{$desktop-only} {
+    margin: 0 0 51px;
+    padding: 0 60px 0 79px;
+  }
+}
+
+.production__link {
+  margin: 0 33px;
+  min-width: 192px;
+
+  @media #{$not-mobile} {
+    margin: 0 41px;
+  }
+
+  @media #{$desktop-only} {
+    margin: 0 56px 0 80px;
+  }
+}
