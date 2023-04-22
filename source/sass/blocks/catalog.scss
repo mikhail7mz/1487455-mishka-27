@@ -87,7 +87,7 @@
 }
 
 .catalog__product:active .catalog__info {
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .catalog__title {
@@ -181,7 +181,7 @@
     display: block;
     width: 20px;
     height: 19px;
-    background-color: #000;
+    background-color: #000000;
     opacity: 0.2;
     mask-repeat: no-repeat;
     mask-position: center center;
