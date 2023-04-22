@@ -1,0 +1,90 @@
+@use "./global/variables" as *;
+@use "./global/media" as *;
+
+.modal {
+  width: 100%;
+  max-width: 566px;
+  padding: 29px var(--page-offset) 45px;
+  border: 1px solid #c6c6c6;
+  background-color: $background-default;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+
+  @media #{$not-mobile} {
+    padding: 37px 107px 44px;
+  }
+}
+
+.modal__heading {
+  margin: 0 0 14px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: $color-dark;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media #{$not-mobile} {
+    margin: 0 -10px 11px;
+    font-size: 30px;
+    line-height: 57px;
+  }
+}
+
+.modal__intro {
+  margin: 0 0 21px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 30px;
+
+  @media #{$not-mobile} {
+    margin-bottom: 19px;
+    font-size: 17px;
+  }
+}
+
+.modal__control-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  margin: 0 0 31px;
+  padding: 0;
+  border: none;
+
+  @media #{$not-mobile} {
+    margin-bottom: 32px;
+  }
+}
+
+.modal__control-label {
+  display: block;
+  padding: 16px 22px;
+  border: 2px solid rgba($color: $color-default, $alpha: 0.1);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:focus {
+    outline-color: #63d1bb;
+    outline-width: 2px;
+    outline-offset: 5px;
+  }
+
+  &:hover {
+    border-color: rgba($color: $color-default, $alpha: 0.3);
+    cursor: pointer;
+  }
+
+  &:active {
+    border-color: #62d1ba;
+  }
+}
+
+.modal__control-input:checked ~ .modal__control-label {
+  border-color: #63d1bb;
+}
+
+.modal__button {
+  width: 100%;
+}

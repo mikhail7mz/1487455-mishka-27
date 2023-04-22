@@ -1,0 +1,21 @@
+<div class="layout__modal-overlay"></div>
+  <form class="modal layout__modal" action="https://echo.htmlacademy.ru/" method="post" data-modal="order">
+    <h2 class="modal__heading">Добавить в&nbsp;корзину</h2>
+    <p class="modal__intro">Выберите размер:</p>
+    <input type="hidden" name="product-id" value="0">
+    <fieldset class="modal__control-group">
+      <label class="modal__control">
+        <input class="modal__control-input visually-hidden" type="radio" name="size" value="s" checked>
+        <span class="modal__control-label">s</span>
+      </label>
+      <label class="modal__control">
+        <input class="modal__control-input visually-hidden" type="radio" name="size" value="m">
+        <span class="modal__control-label">m</span>
+      </label>
+      <label class="modal__control">
+        <input class="modal__control-input visually-hidden" type="radio" name="size" value="l">
+        <span class="modal__control-label">l</span>
+      </label>
+    </fieldset>
+    <button class="modal__button button button--green" type="submit">Добавить</button>
+  </form>

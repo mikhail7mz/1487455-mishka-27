@@ -37,4 +37,31 @@
     color: rgba(255, 255, 255, 0.3);
     background: $color-default;
   }
+
+  &:disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+}
+
+.button--green {
+  padding: 18px;
+  border: none;
+  font-size: 17px;
+  line-height: 16px;
+  color: #ffffff;
+  background-color: #63d1bb;
+
+  &:hover {
+    border: none;
+    color: #ffffff;
+    background-color: #63d1bb;
+    opacity: 0.6;
+  }
+
+  &:active {
+    color: #ffffff;
+    background-color: #63d1bb;
+    opacity: 0.3;
+  }
 }

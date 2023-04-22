@@ -49,7 +49,7 @@
               alt: "Набор из трех вазанных корзиночек."
             } %}
             <p class="product__price">Цена: 990 руб.</p>
-            <a class="product__button button" href="#">заказать</a>
+            <a class="product__button button js-modal-open" data-modal="order" data-product-id="123" href="#">заказать</a>
           </div>
         </div>
       </div>
@@ -153,4 +153,8 @@
       </div>
     </section>
   </main>
+{% endblock %}
+
+{% block modal %}
+  {% include "./templates/modal-order.twig" %}
 {% endblock %}

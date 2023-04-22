@@ -28,7 +28,7 @@
               <p class="catalog__details">Рост 30 см, вес 200 г</p>
               <div class="catalog__buying">
                 <span class="catalog__price">1 200 руб.</span>
-                <a class="catalog__button-cart" href="#">
+                <a class="catalog__button-cart js-modal-open" data-modal="order" data-product-id="001" href="#">
                   <span class="visually-hidden">Добавить в корзину.</span>
                 </a>
               </div>
@@ -49,7 +49,7 @@
               <p class="catalog__details">Диаметр 15 см, высота 10 см</p>
               <div class="catalog__buying">
                 <span class="catalog__price">690 руб.</span>
-                <a class="catalog__button-cart" href="#">
+                <a class="catalog__button-cart js-modal-open" data-modal="order" data-product-id="002" href="#">
                   <span class="visually-hidden">Добавить в корзину.</span>
                 </a>
               </div>
@@ -70,7 +70,7 @@
               <p class="catalog__details">Диаметр 30 см, высота 30 см</p>
               <div class="catalog__buying">
                 <span class="catalog__price">1 500 руб.</span>
-                <a class="catalog__button-cart" href="#">
+                <a class="catalog__button-cart js-modal-open" data-modal="order" data-product-id="003" href="#">
                   <span class="visually-hidden">Добавить в корзину.</span>
                 </a>
               </div>
@@ -99,4 +99,8 @@
       </div>
     </section>
   </main>
+{% endblock %}
+
+{% block modal %}
+  {% include "./templates/modal-order.twig" %}
 {% endblock %}
