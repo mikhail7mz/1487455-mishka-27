@@ -238,7 +238,7 @@
   font: 700 17px/24px var(--font-default);
   color: $color-dark;
   text-decoration: none;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 
   @media #{$not-mobile} {
     padding: 21px 0;
@@ -398,6 +398,7 @@
 .header__infoblock {
   display: none;
   margin: 0;
+  overflow-wrap: anywhere;
 
   @media #{$not-mobile} {
     display: block;
