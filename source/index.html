@@ -76,10 +76,10 @@
           <ul class="feedback__slider">
             <!--
               Все отзывы кроме активного скрыты.
-              Чтобы сделать необходимый отзыв активным необходимо добавить класс
-              feedback__slider-item
+              Чтобы сделать необходимый отзыв активным необходимо добавить класс active
+              элементу feedback__slider-item
             -->
-            <li class="feedback__slider-item feedback__slider-item--active">
+            <li class="feedback__slider-item active">
               <blockquote class="feedback__message">
                 <p class="feedback__message-paragraph">Я молодая мама, но всё равно фотографии не набирали и близко такого количества&nbsp;лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными,&nbsp;а&nbsp;также набирают больше лайков!</p>
                 <cite class="feedback__author">
@@ -108,7 +108,7 @@
             </li>
           </ul>
           <div class="feedback__slider-toggles">
-            <button class="feedback__slider-button feedback__slider-button--prev" type="button">
+            <button class="feedback__slider-button feedback__slider-button--prev" type="button" disabled>
               <span class="visually-hidden">Назад.</span>
             </button>
             <button class="feedback__slider-button feedback__slider-button--next" type="button">
@@ -140,7 +140,7 @@
           width="600"
           height="450"
           allowfullscreen=""
-          loading="lazy"
+          loading="async"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
         <noscript class="contacts__map-noscript">
           {% include "./templates/picture.twig" with {name: "map", class: "contacts__map-image", alt: "Наше местоположение."} %}
